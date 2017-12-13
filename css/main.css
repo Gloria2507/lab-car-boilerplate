@@ -1,1 +1,19 @@
 /* Los estilos de tu proyecto */
+.primera figura{
+  @media(max-width:500px) {
+    
+  }
+}
+
+.yellow{
+  background-color: yellow;
+  width: 400px;
+  height: 200px;
+  text-align: center;
+  color: white;
+}
+
+.btn{
+  color: black;
+  background-color: white;
+}
