@@ -1,19 +1,51 @@
 /* Los estilos de tu proyecto */
-.primera figura{
-  @media(max-width:500px) {
-    
-  }
+.navbar-brand{
+  margin:auto;
+	text-align:center;
 }
-
 .yellow{
-  background-color: yellow;
-  width: 400px;
-  height: 200px;
+  background-color:gold;
+  padding-left: 20px;
   text-align: center;
   color: white;
+  
 }
 
 .btn{
   color: black;
   background-color: white;
+}
+
+.taxi{
+  background-image:url("../assets/images/taxi.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+.background{
+  background-color: gold;
+  color: white;
+} 
+
+.borde{
+  border: 2px solid white;
+  width: 600px;
+  height: 600px;
+}
+
+.for{
+  background-color: gold;
+}
+
+.ruta{
+  background-color: gold;
+}
+
+.mapa{
+width: 500px;
+height: 600px; 
+}
+
+.five{
+  background-color: black;
 }
