@@ -1,51 +1,91 @@
 /* Los estilos de tu proyecto */
-.navbar-brand{
-  margin:auto;
-	text-align:center;
-}
-.yellow{
-  background-color:gold;
-  padding-left: 20px;
-  text-align: center;
+body {
+  background-color: #f7b617;
+  font-family: 'Open Sans', sans-serif;
   color: white;
-  
 }
 
-.btn{
-  color: black;
+.logo {
+  width: 65%;
+}
+
+.logo-write {
+  width: 35%;
+  margin-top: -4px;
+  display: inline-block;
+}
+
+.bg-img {
+  background-position: center bottom; 
+  background-repeat: no-repeat;
+  background-size: cover; 
+  width: 100%;
+}
+
+.bg-taxi {
+  background-image: url('../assets/images/taxi.jpg');
+  height: 100vh;
+}
+
+.bg-conduce {
+  background-image: url('../assets/images/conduce.jpg');
+}
+
+.bg-tx-conduce {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 50vh;
+}
+
+.bg-color {
+  background-color: #f7b617;
+}
+
+.bg-color-white {
   background-color: white;
 }
 
-.taxi{
-  background-image:url("../assets/images/taxi.jpg");
-  background-repeat:no-repeat;
-  background-size: cover;
-  height: 800px;
+.bg-color-footer {
+  background-color: #2b2b2b;
 }
-.background{
-  background-color: gold;
+
+.m-top-bttm{
+  margin-top: 30vh;
+}
+
+.tx-white {
   color: white;
-} 
-
-.borde{
-  border: 2px solid white;
-  width: 600px;
-  height: 600px;
 }
 
-.for{
-  background-color: gold;
+.box-1 {
+  border: 1px solid white;
 }
 
-.ruta{
-  background-color: gold;
+.p-15 {
+  padding: 15px;
 }
 
-.mapa{
-width: 500px;
-height: 600px; 
+.m-20 {
+  margin-top:20px;
+  margin-bottom: 20px;
 }
 
-.five{
-  background-color: black;
+.color-place::placeholder {
+  color: white;
 }
+
+.pt-10 {
+  padding-bottom: 10px;
+}
+
+.line-p::before,
+.line-p::after {
+  content: '';
+  width: 25%;
+  height: 2px;
+  background-color: white;
+  display: inline-block;
+  margin: 4px 20px ;
+}
+
+
+
