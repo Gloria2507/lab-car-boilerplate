@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/icons/css-fonts/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
-  <title>Prácticando-bootstrap</title>
+  <title>Lab-car</title>
 </head>
 <body>
     <header class="bg-color-white">
@@ -50,10 +50,10 @@
                   <h3><span class="hidden-xs">viaja</span> con <img class="logo-write img-responsive" src="assets/images/logoBlanco.png" alt="logo-write" class="img-responsive" ></h3>
               </span>
               <a class="btn btn-default btn-lg navbar-text visible-xs-block" href="#" role="button">Descarga el App</a>
-              <a class="btn btn-default btn-lg navbar-text hidden-xs" data-toggle="modal" data-target="#modalRegistrar">REGISTRATE</a>
+              <a class="btn btn-default btn-lg navbar-text hidden-xs" href="#myModal1" role="button" data-toggle="modal">REGISTRATE</a>
               <br><br class="hidden-xs"><br class="hidden-xs"><br class="hidden-xs">
               <h4 class="hidden-xs line-p">O bien</h4>
-              <a class="btn btn-default btn-lg navbar-text hidden-xs"  href="#" role="button">Conviértete en Conductor</a>
+              <a class="btn btn-default btn-lg navbar-text hidden-xs" href="#myModal2" data-toggle="modal" role="button">Conviértete en Conductor</a>
             </div>  
           </div>
         </div>
@@ -81,7 +81,7 @@
                 <h3 class="m-20">Conduce cuando quieras</h3>
                 <h4>LabCar es una opción flexible para alcanzar tus metas financieras.</h4>
               </div>
-              <a class="btn  btn-warning btn-lg navbar-text bg-color" href="#" data-toggle="modal" data-target=".modal-conductor">Conviértete en conductor</a>
+              <a class="btn  btn-warning btn-lg navbar-text bg-color"href="#myModal2" data-toggle="modal" role="button">Conviértete en conductor</a>
             </div>
         </div>
     </section>
@@ -175,7 +175,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <div class="modal-header">
 
-                    <img class="img-modal" src="assets/images/usuario.png" alt="">
+                    <img class="img-modal" src="assets/images/usuario.png" alt="imagen de usuario">
 
                 </div>
                 <div class="modal-body">
@@ -192,126 +192,105 @@
                         <p class="password-text">Forgot Password?
                             <span class="red-text">Click Here</span>
                         </p>
-
-
                     </form>
                 </div>
-
             </div>
-
         </div>
     </div>
-     <!--Modal de Registrece-->
-    <div class="modal fade" id="modalRegistrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog md2" role="document">
-          <div class="modal-content2">
-            <div class="modal-header text-center no-line">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+    <!--Modal de regístrate -->
+<div id="myModal1" class="modal fade">
+    <div class="modal-dialog modal-login">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>				
+          <h3>Ya tienes una cuenta?</h3>
+          <h4>O CREA UNA CUENTA NUEVA</h4> 
+        </div>
+        <div class="modal-body">
+          <form action="/examples/actions/confirmation.php" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nombre" required="required">
+              <input type="text" class="form-control" placeholder="Apellido" required="required">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Correo Electrónico:ejemplo@correo.mx" required="required">					
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" placeholder="Teléfono" required="required">					
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Contraseña" required="required">					
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ciudad" required="required">					
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" placeholder="(Opcional) Código de invitación" required="required">					
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cómo te enteraste de nosotros? <span class="caret"></span>
+                  </button>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary btn-block btn-lg" value="ENVIAR">
+            </div>
+          </form>				                
+        </div>
+      </div>
+    </div>
+  </div>                
+<!-- Termina modal de regístrate -->  
+     <!-- Modal  conductor-->
+     <div id="myModal2" class="modal fade">
+        <div class="modal-dialog modal-login">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>				 
             </div>
             <div class="modal-body">
-              <form class="formModal2">
-                <div class="form-group ">
-                  <button type="button" class="btn btn-color2 text-center size">Ya tienes una cuenta nueva?</button>
-                </div>
-                <div class="form-group ">
-                  <p class="text-center">O CREA UNA CUENTA NUEVA</p>
-                </div>
-                <div class="form-group col-sm-6 padding-na">
-                  <input class="placeholder-color input-reg size " type="text" placeholder="Nombre">
-                </div>
-                <div class="form-group col-sm-6 padding-na">
-                  <input class="placeholder-color input-reg size  " type="text" placeholder="Apellido">
+              
+                <div class="form-group">
+                    <h5>¿Tienes vehículo de 4 puertas?</h5>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Si <span class="caret"></span>
+                      </button>
                 </div>
                 <div class="form-group">
-                  <input class="placeholder-color input-reg size" type="text" placeholder="Correro Electrónico ejemplo@correo.mx">
+                    <h5>Marca</h5>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Elige la marca del vehículo<span class="caret"></span>
+                      </button>
+                    <p>¿No ves tu vehículo en la lista? Envía un correo electrónico a <a href="#">sociosmdv@uber.com</a></p>
                 </div>
                 <div class="form-group">
-                  <input class="placeholder-color input-reg size" type="text" placeholder="Teléfono">
+                    <h5>Modelo</h5>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        modelo 1 <span class="caret"></span>
+                      </button>
                 </div>
                 <div class="form-group">
-                  <input class="placeholder-color input-reg size" type="password" placeholder="Contraseña">
+                    <h5>Año</h5>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        2017 <span class="caret"></span>
+                      </button>
                 </div>
                 <div class="form-group">
-                  <input class="placeholder-color input-reg size" type="text" placeholder="Ciudad">
+                    <h5>Número de la matrícula</h5>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Número de la matrícula <span class="caret"></span>
+                      </button>
+                    <p>La información de la matrícula ayuda a los clientes a identificar tu vehículo</p>
                 </div>
                 <div class="form-group">
-                  <input class="placeholder-color input-reg size" type="text" placeholder="(Opcional) Código de invitación">
+                  <input type="submit" class="btn btn-primary btn-block btn-lg" value="ENVIAR">
                 </div>
-                <div class="form-group ">
-                  <button type="button" class="btn btn-color3 size">Como te enteraste de nosotros?
-                    <span class="icon-chevron-down"></span>
-                  </button>
-                </div>
-                <div class="form-group ">
-                  <button type="button" class="btn btn-color4 size">ENVIAR</button>
-                </div>
-              </form>
+              </form>				                
             </div>
           </div>
         </div>
-      </div>
-      <!--Fin del Modal de Registrece-->
-     <!-- Modal  conductor-->
-     <div class="modal fade modal-conductor" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content modal-gris">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label>¿Tienes vehículo de 4 puertas?</label>
-                            <select class="form-control">
-                                <option>si</option>
-                                <option>No</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Marca</label>
-                            <select class="form-control">
-                                <option selected>Elige la marca de tu vehiculo</option>
-                                <option>BMW</option>
-                                <option>FERRARI</option>
-                                <option>KIA</option>
-                            </select>
-                            <p class="text-marca">¿No ves tu vehículo en la lista?Envía un correo electrónico a</p>
-                            <p class="text-marca text-info bold">sociosmdv@uber.com</p>
-                        </div>
-                        <div class="form-group">
-                            <label>Modelo: </label>
-                            <select class="form-control">
-                                <option selected>Modelo1</option>
-                                <option>Modelo2</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Año: </label>
-                            <select class="form-control">
-                                <option selected>2017</option>
-                                <option>2016</option>
-                                <option>2015</option>
-                                <option>2014</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Número de matrícula: </label>
-                            <input class="form-control" type="text" placeholder="Número de la matricula" />
-                            <p>La información de la matrícula ayuda a los clientes a identificar tu vehículo</p>
-                        </div>
-
-                        <button class="btn btn-info btn-block">
-                            <span class="bold textuppercase">Enviar</span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+      </div> 
+      <!--Termina modal del conductor-->
     <!-- Estructura de booststrap -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="vendors/bootstrap/js/bootstrap.min.js"></script>
